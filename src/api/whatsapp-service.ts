@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { Client } = require("whatsapp-web.js");
+import { Client } from "whatsapp-web.js";
 import { BrowserWindow } from "electron";
 import QRCode from "qrcode";
 import { IPC_CHANNELS } from "../channels";

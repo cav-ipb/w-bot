@@ -1,6 +1,5 @@
 import { app, BrowserWindow, ipcMain, webContents, shell, dialog, session } from 'electron';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('node:path')
 import WhatsAppService from './api/whatsapp-service';
 import { Login } from './types/login';
 import { AuthenticationService } from './api/authentication-service';
@@ -21,17 +20,9 @@ let mainWindow : BrowserWindow;
 let semaphore = false;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) {
-  app.quit();
-}
-
-if (process.defaultApp) {
-  if (process.argv.length >= 2) {
-    app.setAsDefaultProtocolClient('pharmaconnex-whatsapp-bot', process.execPath, [path.resolve(process.argv[1])])
-  }
-} else {
-  app.setAsDefaultProtocolClient('pharmaconnex-whatsapp-bot')
-}
+// if (require('electron-squirrel-startup')) {
+//   app.quit();
+// }
 
 // processing deep links to get the cookie and to start new jobs
 const processDeepLink = (deepLink:string) => {
