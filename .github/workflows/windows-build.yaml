@@ -25,7 +25,7 @@ jobs:
         run: npm run make
 
       - name: 📤 Upload output files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: electron-windows-build
           path: out/make/**/*
