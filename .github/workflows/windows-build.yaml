@@ -1,0 +1,31 @@
+name: Build Electron App for Windows
+
+on:
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  push:
+    branches: [main]  # You can change this to your main branch
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🛠 Build Windows app with Electron Forge
+        run: npm run make
+
+      - name: 📤 Upload output files
+        uses: actions/upload-artifact@v3
+        with:
+          name: electron-windows-build
+          path: out/make/**/*

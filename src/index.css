@@ -1,0 +1,32 @@
+@import './assets/css/bootstrap.min.css' layer(bootstrap);
+
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+@import 'primeicons/primeicons.css';
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  background-color: #F9FAFB;
+}
+
+.image {
+  height: 200px;
+  width: 100px;
+  background-image: url(./assets/Logo-205.png);
+}
+
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #DEE7EF;
+  border-radius: 12px;
+}
+
+.flex-center-vh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
