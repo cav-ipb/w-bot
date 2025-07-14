@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: electron-windows-build
-          path: out/make/**/*
+          path: out/**/*
