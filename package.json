@@ -12,16 +12,6 @@
     "lint": "eslint --ext .ts,.tsx .",
     "dist": "electron-builder"
   },
-  "build": {
-    "appId": "com.myapp.id",
-    "productName": "MyApp",
-    "files": [
-      "**/*"
-    ],
-    "win": {
-      "target": "nsis"
-    }
-  },
   "keywords": [],
   "author": {
     "name": "vmc",
@@ -47,7 +37,6 @@
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "css-loader": "^6.11.0",
     "electron": "37.2.0",
-    "electron-builder": "^26.0.12",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.32.0",
     "fork-ts-checker-webpack-plugin": "^7.3.0",
